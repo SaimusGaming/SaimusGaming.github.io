@@ -14,7 +14,7 @@ jobs:
     
     - name: Fetch Pastebin Data
       run: |
-        curl https://pastebin.com/raw/2VRaccd2 > pastebin-data.txt
+        curl https://pastebin.com/raw/2VRaccd2 > data/pastebin-data.txt
         echo "Contenido de pastebin-data.txt:"
         cat pastebin-data.txt
 

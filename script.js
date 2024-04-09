@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function cargarDatos() {
-    const urlData = 'data/pastebin-data.json'; // Ajusta esta ruta según la ubicación del archivo en tu repositorio
+    const urlData = '/data/pastebin-data.json'; // Ajusta esta ruta según la ubicación del archivo en tu repositorio
 
     fetch(urlData)
     .then(response => response.json())

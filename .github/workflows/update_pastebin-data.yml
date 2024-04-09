@@ -15,13 +15,13 @@ jobs:
     - name: Fetch Pastebin Data
       run: |
         curl https://pastebin.com/raw/2VRaccd2 > data/pastebin-data.txt
-        echo "Contenido de pastebin-data.txt:"
-        cat pastebin-data.txt
+        echo "Contenido de data/pastebin-data.txt:"
+        cat data/pastebin-data.txt
 
     - name: Commit and Push if Changed
       run: |
         git config --global user.name 'SaimusGaming'
         git config --global user.email 'contacto@Saimusgaming.es'
-        git add pastebin-data.txt
+        git add data/pastebin-data.txt
         git commit --allow-empty -m "Update Pastebin data"
         git push

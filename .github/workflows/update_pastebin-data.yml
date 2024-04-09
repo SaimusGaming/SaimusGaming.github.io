@@ -1,11 +1,8 @@
-- name: Fetch Pastebin Data
-  run: |
-    curl https://pastebin.com/raw/2VRaccd2 > pastebin-data.txt
-    cat pastebin-data.txt
+name: Update Pastebin Data
 
 on:
   schedule:
-    - cron: '*/2 * * * *' # Ejecuta este flujo de trabajo cada 10 minutos
+    - cron: '*/10 * * * *' # Ejecuta este flujo de trabajo cada 10 minutos
   workflow_dispatch:
 
 jobs:
@@ -13,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v2
     
     - name: Fetch Pastebin Data
       run: curl https://pastebin.com/raw/2VRaccd2 > data/pastebin-data.txt

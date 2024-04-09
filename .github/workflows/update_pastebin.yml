@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Fetch Pastebin Data
-      run: curl https://pastebin.com/raw/2VRaccd2 > pastebin-data.txt
+      run: curl https://pastebin.com/raw/2VRaccd2 > data/pastebin-data.txt
       
     - name: Commit and Push if Changed
       run: |

@@ -39,5 +39,5 @@ document.addEventListener('DOMContentLoaded', function cargarDatos() {
 
     actualizarDatos(); // Llama a actualizarDatos() inmediatamente al cargar la página
 
-    setInterval(actualizarDatos, 600000); // Actualiza los datos cada 10 minutos (600000 milisegundos)
+    setInterval(actualizarDatos, 100000); // Actualiza los datos cada 10 minutos (600000 milisegundos)
 });

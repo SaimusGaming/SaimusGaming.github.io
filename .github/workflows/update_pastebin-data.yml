@@ -1,0 +1,24 @@
+name: Update Pastebin Data
+
+on:
+  schedule:
+    - cron: '*/1 * * * *' # Ejecuta este flujo de trabajo cada 1 minutos
+  workflow_dispatch:
+
+jobs:
+  fetch-and-update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Fetch Pastebin Data
+      run: curl https://pastebin.com/raw/2VRaccd2 > data/pastebin-data.txt
+      
+    - name: Commit and Push if Changed
+      run: |
+        git config --global user.name 'SaimusGaming'
+        git config --global user.email 'contacto@saimusgaming.es'
+        git add data/pastebin-data.txt
+        git diff --quiet || git commit -m "Update Pastebin data"
+        git push

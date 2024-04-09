@@ -18,9 +18,9 @@ jobs:
         curl https://pastebin.com/raw/2VRaccd2 > data/pastebin-data.json
         
     - name: Commit and push if changed
-      run: |
-        git config --global user.email "action@github.com"
-        git config --global user.name "GitHub Action"
-        git add data/pastebin-data.json
-        git commit -m "Update Pastebin data" -a || echo "No changes to commit"
-        git push
+  run: |
+    git config --global user.email "action@github.com"
+    git config --global user.name "GitHub Action"
+    git add data/pastebin-data.json
+    git diff --staged --quiet || (git commit -m "Update Pastebin data" && git push)
+

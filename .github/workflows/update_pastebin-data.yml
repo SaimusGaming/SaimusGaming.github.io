@@ -2,7 +2,7 @@ name: Update Pastebin Data
 
 on:
   schedule:
-    - cron: '*/1 * * * *' # Ejecuta este flujo de trabajo cada 1 minutos
+    - cron: '*/10 * * * *' # Ejecuta este flujo de trabajo cada 10 minutos
   workflow_dispatch:
 
 jobs:

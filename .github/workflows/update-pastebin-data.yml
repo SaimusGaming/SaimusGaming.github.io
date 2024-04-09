@@ -2,7 +2,7 @@ name: Update Pastebin Data
 
 on:
   schedule:
-    - cron: '*/10 * * * *' # Ejecuta este flujo de trabajo cada 10 minutos
+    - cron: '*/2 * * * *' # Ejecuta este flujo de trabajo cada 2 minutos para pruebas
 
 jobs:
   fetch-pastebin-data:
@@ -12,12 +12,12 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Fetch Pastebin Data
-      run: curl https://pastebin.com/raw/2VRaccd2 > data/pastebin-data.txt
+      run: curl https://pastebin.com/raw/2VRaccd2 > pastebin-data.txt
       
     - name: Commit and Push if Changed
       run: |
         git config --global user.name 'SaimusGaming'
         git config --global user.email 'contacto@Saimusgaming.es'
         git add pastebin-data.txt
-        git commit -m "Update Pastebin data" -a || echo "No changes to commit"
+        git diff --quiet || git commit -am "Update Pastebin data"
         git push

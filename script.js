@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', function cargarDatos() {
-    // Asume que el acceso CORS ya está habilitado por el usuario a través de CORS Anywhere o similar.
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-    const urlPastebin = 'https://pastebin.com/raw/2VRaccd2';
+    // La URL apunta directamente al archivo en tu repositorio de GitHub
+    const urlArchivo = 'https://raw.githubusercontent.com/SaimusGaming/SaimusGaming.github.io/main/data/pastebin-data.txt';
 
-    fetch(proxyUrl + urlPastebin)
+    fetch(urlArchivo)
     .then(response => response.text())
     .then(data => {
         let jugadores = data.split('\n').map((linea) => {
             const [nombre, puntosTexto] = linea.split(' - ');
             const puntos = parseInt(puntosTexto, 10);
             return { nombre: nombre.trim(), puntos };
-        }).filter(jugador => jugador !== null);
+        }).filter(jugador => jugador.puntos); // Asegurarse de que cada jugador tiene puntos asociados
 
+        // Ordena los jugadores por sus puntos, de mayor a menor
         jugadores.sort((a, b) => b.puntos - a.puntos);
-        jugadores = jugadores.map((jugador, index) => ({ ...jugador, posicion: index + 1 }));
 
+        // Actualiza la lista de jugadores en la página web
         const lista = document.getElementById('jugadoresLista');
         lista.innerHTML = ''; // Limpia la lista antes de añadir elementos ordenados
 

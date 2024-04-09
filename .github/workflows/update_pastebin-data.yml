@@ -10,15 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v3
     
     - name: Fetch Pastebin Data
       run: |
         curl https://pastebin.com/raw/2VRaccd2 > pastebin-data.txt
         echo "Contenido de pastebin-data.txt:"
         cat pastebin-data.txt
-      
-        - name: Commit and Push if Changed
+
+    - name: Commit and Push if Changed
       run: |
         git config --global user.name 'SaimusGaming'
         git config --global user.email 'contacto@Saimusgaming.es'

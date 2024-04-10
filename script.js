@@ -36,14 +36,14 @@ document.addEventListener('DOMContentLoaded', function cargarDatos() {
             const item = document.createElement('li');
             item.className = 'jugador';
             item.innerHTML = `
-                <div class="banner-jugador" style="background-image: url('${jugador.urlImagen}');">
-                    <img src="${urlImagenPosicion}" alt="Posición" class="imagen-posicion">
-                    <div class="detalle-jugador">
-                        <div class="nombre">${jugador.nombre}</div>
-                        <div class="puntos">${jugador.puntos} Puntos</div>
-                    </div>
+            <div class="banner-jugador" style="background-image: url('${jugador.urlImagen}');">
+                <img src="${urlImagenPosicion}" alt="Posición" class="imagen-posicion">
+                <div class="detalle-jugador">
+                    <div class="nombre">${jugador.nombre}</div>
+                    <div class="puntos">${jugador.puntos}</div> <!-- Cambio realizado aquí -->
                 </div>
-            `;
+            </div>
+        `;
             lista.appendChild(item);
         });
     }

@@ -6,6 +6,7 @@ body, html {
 }
 
 .container {
+    position: relative;
     width: 80%;
     max-width: 500px;
     margin: 20px auto;
@@ -18,25 +19,30 @@ h1 {
 }
 
 .jugador {
+    position: relative; /* Esto asegura que el posicionamiento absoluto de los puntos sea relativo al jugador */
     display: flex;
     align-items: center;
-    border: 2px solid #000;
     margin-bottom: 10px;
-    position: relative; /* Se mantiene para posicionar correctamente el banner */
 }
 
 .banner-jugador {
-    width: 100%;
-    padding: 10px; /* Se mantiene para el contenido sobre el banner */
-    background-size: cover; /* Se mantiene para asegurar que el banner cubra el espacio asignado */
-    background-position: center; /* Se mantiene para centrar el banner */
+    width: 100%; /* Mantiene el ancho al 100% del contenedor padre */
+    height: 40px; /* Ajusta la altura a un valor fijo para aumentar la visión del banner */
+    padding: 0;
+    background-size: cover; /* Asegura que el banner cubra todo el espacio disponible */
+    background-position: center; /* Centra el banner */
     display: flex;
     align-items: center; /* Alinea verticalmente los elementos dentro del banner */
 }
 
 .imagen-posicion {
-    width: 50px; /* Ancho fijo para la imagen de posición */
-    margin-right: 10px; /* Espacio entre la imagen de posición y el nombre del jugador */
+    position: absolute;
+    width: 60px; /* Ajusta el ancho de la imagen */
+    height: auto; /* Mantiene la proporción de aspecto de la imagen */
+    transform: scale(1.1); /* Escala la imagen a 120% de su tamaño original */
+    top: 3px; /* Mueve la imagen hacia abajo desde el borde superior del contenedor */
+    left: 3px; /* Mueve la imagen hacia la derecha desde el borde izquierdo del contenedor */
+    /* Ajusta `top`, `right`, `bottom`, `left` según sea necesario */
 }
 
 .detalle-jugador {
@@ -55,9 +61,27 @@ h1 {
 .nombre {
     flex-grow: 1;
     margin: 0 10px;
+    font-family: "Burbank Big Condensed Black";
+    letter-spacing: 1px;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000;
+    font-size: 30px;
+    transform: translate(65px, 2px); /* Mueve el nombre 10px a la derecha y 5px hacia abajo */
 }
 
 .puntos {
+    position: absolute; /* Permite posicionar los puntos independientemente */
+    top: 9px; /* Mueve hacia abajo desde el top del banner. Ajusta según necesites */
+    right: 25px; /* Mueve hacia la izquierda desde el right del banner. Ajusta según necesites */
+    font-family: "Burbank Big Condensed Black";
+    letter-spacing: 1px;
+    -webkit-text-stroke: 1px black;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size: 30px; /* Asegura que el tamaño de fuente se mantiene */
     white-space: nowrap;
 }
 
@@ -74,4 +98,21 @@ h1 {
     right: 0px; /* Mueve el buscador hacia la izquierda desde su posición normal */
     bottom: 0px; /* Mueve el buscador hacia arriba desde su posición normal */
     left: 20px; /* Mueve el buscador hacia la derecha desde su posición normal */
+}
+@font-face {
+    font-family: "Burbank Big Condensed Black";
+    src: url("https://db.onlinewebfonts.com/t/cdc8c3de1e6bd5a9a67c6a001f9fedd0.eot");
+    src: url("https://db.onlinewebfonts.com/t/cdc8c3de1e6bd5a9a67c6a001f9fedd0.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/cdc8c3de1e6bd5a9a67c6a001f9fedd0.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/cdc8c3de1e6bd5a9a67c6a001f9fedd0.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/cdc8c3de1e6bd5a9a67c6a001f9fedd0.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/cdc8c3de1e6bd5a9a67c6a001f9fedd0.svg#Burbank Big Condensed Black")format("svg");
+}
+#logoPuntos {
+    position: absolute;
+    top: 185px;
+    right: -37px;
+    width: 1px; /* Ajusta el tamaño como necesites */
+    height: auto;
+    transform: scale(0.5); /* Ajusta la escala como necesites */
 }

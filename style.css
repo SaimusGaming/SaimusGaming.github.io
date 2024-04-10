@@ -39,3 +39,13 @@ h1 {
 .puntos {
     white-space: nowrap; /* Asegura que los puntos siempre estén en una sola línea */
 }
+
+#buscadorJugador {
+    display: block;
+    width: 60%; /* Ajusta el ancho a tu preferencia */
+    margin: 20px auto; /* Centra el elemento horizontalmente y añade margen superior e inferior */
+    padding: 8px; /* Añade algo de espacio dentro del campo para el texto */
+    font-size: 16px; /* Tamaño del texto dentro del campo de búsqueda */
+    border: 1px solid #000; /* Estilo de borde para coincidir con el diseño general */
+    border-radius: 4px; /* Esquinas redondeadas para el campo de búsqueda */
+}

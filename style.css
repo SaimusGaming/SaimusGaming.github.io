@@ -69,4 +69,9 @@ h1 {
     font-size: 16px;
     border: 1px solid #000;
     border-radius: 4px;
+    position: relative; /* Añadido para permitir ajustes de posición precisos */
+    top: 0px; /* Mueve el buscador hacia abajo desde su posición normal */
+    right: 0px; /* Mueve el buscador hacia la izquierda desde su posición normal */
+    bottom: 0px; /* Mueve el buscador hacia arriba desde su posición normal */
+    left: 20px; /* Mueve el buscador hacia la derecha desde su posición normal */
 }

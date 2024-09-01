@@ -1,8 +1,7 @@
-Choppy - 3
-Abdur - 0
-Smilefiez - 0
-Furbies - 0
-Jepomo18 - 0
-Saimusgaming - 0
-loopskills - 0
-Martu - 0
+Abdur - 10
+Smilefiez - 10
+Furbies - 10
+Jepomo18 - 10
+Saimusgaming - 100
+loopskills - 10
+Martu - 10

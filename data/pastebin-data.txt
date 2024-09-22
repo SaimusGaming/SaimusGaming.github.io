@@ -1,4 +1,4 @@
-Smilefiez - 9
+Smilefiez - 12
 SaimusGaming - 10
 jepomo - 1
 Martin - 1
@@ -8,3 +8,4 @@ Index - 2
 Martu - 6
 Nashira - 1
 Furbis - 1
+Bolete - 1

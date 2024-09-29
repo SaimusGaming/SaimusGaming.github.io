@@ -7,6 +7,6 @@ LoopSkills - 7
 Index - 2
 Martu - 12
 Nashira - 1
-Furbis - 2
-Bolete - 11
+Furbis - 3
+Bolete - 14
 Twirly - 1
